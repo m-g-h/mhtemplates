@@ -11,7 +11,13 @@ use_project <- function(path = "~/Documents/Projects/", project = "template", mo
 
   if (mode == "tex_only") {
 
-    mhtemplates::use_latex(dir = project)
+    dir.create(paste0(path, project))
+    file.copy(system.file("templates/latex.zip", package = "mhtemplates"),
+              to = paste0(path, project,"/latex.zip"))
+
+    unzip(paste0(path, project,"/latex.zip"),exdir = paste0(path, project))
+
+    file.remove(paste0(path, project,"/latex.zip"))
   }
 
   else if (mode == "data_minimal") {
@@ -24,7 +30,7 @@ use_project <- function(path = "~/Documents/Projects/", project = "template", mo
     usethis::use_data_raw()
   }
 
-  else if (mode == "dat_full") {
+  else if (mode == "data_full") {
     usethis::create_package(path = paste0(path,project), open = F)
     usethis::proj_set(path = paste0(path,project))
     usethis::use_package("drake", type = "imports")
