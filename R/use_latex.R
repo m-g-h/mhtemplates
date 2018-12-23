@@ -1,4 +1,4 @@
-#' Create files for latex integration in "written/"
+#' Creates files for latex integration in "written/".
 #'
 #' @export
 #'

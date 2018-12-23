@@ -2,15 +2,10 @@
 % Please edit documentation in R/use_latex.R
 \name{use_latex}
 \alias{use_latex}
-\title{Create files for latex integration in "written/"}
+\title{Creates files for latex integration in "written/".}
 \usage{
-use_latex(path, project)
-}
-\arguments{
-\item{path}{The Path to the project folder.}
-
-\item{project}{The name of the project folder}
+use_latex(dir = "written")
 }
 \description{
-Create files for latex integration in "written/"
+Creates files for latex integration in "written/".
 }

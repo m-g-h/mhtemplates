@@ -1,4 +1,3 @@
-
 originalwd <- getwd()
 setwd("templates/latex/")
 
@@ -7,7 +6,4 @@ zip("../../inst/templates/latex",
 
 setwd(originalwd)
 
-
-
-
-
+install()
