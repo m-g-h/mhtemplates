@@ -1,0 +1,48 @@
+%% PREAMBLE -------------------------------------------------------------------------------------
+	\input{.preamble/preamble-eng}	% preamble-ger or preamble-eng
+
+% TITLE -----------------------------------------------------------------------------------------
+	\newcommand{\Title}				{Title} 
+	\newcommand{\Subtitle}			{Subtitle}
+	\newcommand{\Institution}		{Institution}
+	\newcommand{\Programme} 		{Programme}
+	\newcommand{\AsssignmentName}	{Assignment Name}
+	\newcommand{\Name}				{Name}
+	\newcommand{\MatrikelNummer}	{12345678}
+	\newcommand{\Date}				{Date}
+	\newcommand{\Semester}			{Term}
+	\newcommand{\Supervisor}		{Supervisor}
+	\newcommand{\Class}				{Seminar Title}
+
+% DOCUMENT --------------------------------------------------------------------------------------
+\begin{document}
+
+% TITLEPAGE -------------------------------------------------------------------------------------
+	\begin{titlepage}
+		\input{.frontmatter/titlepage-assignment-eng}		% titlepage-assignment-de or titlepage-assignment-eng or titlepage-with-logo
+	\end{titlepage}
+
+% CONTENTS --------------------------------------------------------------------------------------
+	\pagenumbering{roman}
+	\newpage
+	\tableofcontents
+	\listoftables
+	\listoffigures
+
+% ABSTRACT --------------------------------------------------------------------------------------
+	\newpage
+	\pagenumbering{arabic}
+	\section{Abstract}
+	Here comes the abstract!
+
+% DOCUMENT --------------------------------------------------------------------------------------
+	\newpage
+
+% AUTHORS DECLARATION ---------------------------------------------------------------------------
+	\input{.frontmatter/authors-declaration-eng}	% authors-declaration-eng or authors-declaration-ger
+
+% BIBLIOGRAPHY ----------------------------------------------------------------------------------
+	\newpage
+	\printbibliography
+	
+\end{document}

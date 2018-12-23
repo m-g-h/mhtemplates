@@ -1,0 +1,82 @@
+% PREAMBLE --------------------------------------------------------------------------------------
+	\documentclass[11pt,a4paper,parskip]{scrartcl}
+
+% FORMATTING ------------------------------------------------------------------------------------
+	\addtokomafont{disposition}{\rmfamily}
+	\usepackage{geometry}							% Edge spacing 
+	\geometry{
+		left=2.5cm,
+		right=2.5cm,
+		top=2cm,
+		bottom=4cm,
+		bindingoffset=5mm
+	}
+	\setlength{\parindent}{0pt}						% Length of indentation of the first line of a paragraph
+	\usepackage{paralist}							% Fancy lists and enumerations
+	\usepackage{graphicx}							% Picture Integration
+	\usepackage{subcaption}							% Allows Subgraphics
+	\usepackage{booktabs}							% Nice tables
+	\usepackage{multirow}
+	\usepackage{lscape}
+	\usepackage{setspace}							% 1.5 spacing of lines
+	\onehalfspacing
+	%\usepackage{titlesec}							% Spacing of Titlesections
+	%\titlespacing*{\section}{0pt}{35px}{6px}		% Spacing LEFT, BEFORE and AFTER Section Header
+	%\titlespacing*{\subsection}{0pt}{35px}{6px}	% Spacing LEFT, BEFORE and AFTER Subsection Header
+	%\titlespacing*{\subsubsection}{5px}{20px}{6px}	% Spacing LEFT, BEFORE and AFTER Subsubsection Header
+	
+	\usepackage{enumitem}							% Compact itemize lists
+	\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+	
+	\newtheorem{theorem}{Theorem}					% Theorem environment
+	
+	\usepackage{booktabs}							% Fancy table formatting
+
+% TYPESETTING -----------------------------------------------------------------------------------
+	\usepackage[utf8]{inputenc}						% utf8 for german nouns OE, AE and UE, else latin1
+	\usepackage[T1]{fontenc}						% Correct Typeset
+	\usepackage{lmodern}							% Latin Modern Typeset
+	\usepackage{bbding}								% Fancy Symbols
+	\usepackage[all]{nowidow} 						% google widows and orphans latex... 
+	%\renewcommand*\familydefault{\sfdefault}		% Typeset without serifs
+	\usepackage[activate={true,nocompatibility},
+				tracking=true,	
+				kerning=true]{microtype}			% Next-level typesetting
+
+% UTILITY ---------------------------------------------------------------------------------------
+	\usepackage{hyperref} 							% add [hidelinks] if you don't want to see each link highlighted...
+	\hypersetup{
+		bookmarks=true,         % show bookmarks bar?
+		unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+		pdftoolbar=true,        % show Acrobat’s toolbar?
+		pdfmenubar=true,        % show Acrobat’s menu?
+		pdffitwindow=false,     % window fit to page when opened
+		pdfstartview={FitH},    % fits the width of the page to the window
+		pdftitle={My title},    % title
+		pdfauthor={Author},     % author
+		pdfsubject={Subject},   % subject of the document
+		pdfcreator={Creator},   % creator of the document
+		pdfproducer={Producer}, % producer of the document
+		pdfkeywords={keyword1, key2, key3}, % list of keywords
+		pdfnewwindow=true,      % links in new PDF window
+		colorlinks=true,       % false: boxed links; true: colored links
+		linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
+		citecolor=green,        % color of links to bibliography
+		filecolor=magenta,      % color of file links
+		urlcolor=cyan           % color of external links
+	}
+
+% MATHS -----------------------------------------------------------------------------------------
+	\usepackage{amsmath}							% Standard maths package
+	\usepackage{amssymb}							% Fancy symbols and typesets (includes amsfonts)
+	\usepackage{amstext}							% Allows text in formulas
+	\usepackage{extarrows}							% fancy arrows
+	\usepackage{bm}									% Fancy bold greeks \bm{math expression}
+	\newcommand{\undset}[2]{\underset{\scriptscriptstyle #1}{#2\strut}}	
+	% Correct height of different \undersets
+
+% BIBLIOGRAPHY ----------------------------------------------------------------------------------
+	\usepackage[backend=biber,citestyle=authoryear-icomp,bibstyle=authoryear]{biblatex}
+	% Biblatex bibliography
+	\usepackage[babel,german=quotes]{csquotes}		% German quotes in citations
+	\addbibresource{bibliography.bib} 				% Path of bib-file
