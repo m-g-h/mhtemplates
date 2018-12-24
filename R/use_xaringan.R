@@ -2,6 +2,8 @@
 #'
 #' @export
 #'
+#' @importFrom usethis use_directory
+#'
 use_xaringan <- function(dir = "presentation") {
 
   usethis::use_directory(paste0(dir,"/"))

@@ -3,3 +3,5 @@
 export(use_latex)
 export(use_project)
 export(use_xaringan)
+import(usethis)
+importFrom(usethis,use_directory)

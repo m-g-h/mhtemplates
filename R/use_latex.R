@@ -2,6 +2,8 @@
 #'
 #' @export
 #'
+#' @importFrom usethis use_directory
+#'
 use_latex <- function(dir = "written") {
 
   usethis::use_directory(paste0(dir,"/"))

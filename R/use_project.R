@@ -7,6 +7,9 @@
 #' adds drake and LaTeX integration.
 #'
 #' @export
+#'
+#' @import usethis
+#'
 use_project <- function(path = "~/Documents/Projects/", project = "template", mode = "tex_only") {
 
   if (mode == "tex_only") {
@@ -39,5 +42,6 @@ use_project <- function(path = "~/Documents/Projects/", project = "template", mo
     usethis::use_pipe()
     usethis::use_data_raw()
     mhtemplates::use_latex()
+    mhtemplates::use_xaringan()
   }
 }
