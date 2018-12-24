@@ -2,3 +2,4 @@
 
 export(use_latex)
 export(use_project)
+export(use_xaringan)

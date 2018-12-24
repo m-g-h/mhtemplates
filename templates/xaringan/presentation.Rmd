@@ -1,0 +1,106 @@
+---
+title: "mhtemplate"
+subtitle: "A Basic Presentation Layout"
+author: "Martin Haas"
+date: "YYYY-MM-DD"
+output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts, mycss.css]
+    lib_dir: libs
+    nature:
+      highlightStyle: solarized-light
+      highlightLines: true
+      highlightSpans: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+class: inverse, center, middle
+
+# Chapter Title
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=960px></html> 
+
+---
+
+# Title 1
+
+## Title 2
+
+### Title 3
+
+---
+
+# Lists
+
+- Unnumbered Item 1
+    - Subitem 
+        - Subsubitem 
+            - We have to go deeper
+- Unnumbered Item 2
+- Unnumbered Item 3
+
+1. Numbered Item 1
+2. Numbered Item 2
+3. Numbered Item 3
+
+---
+
+# Table
+
+Right Aligned | Centered   | Left Aligned
+-------------:|:----------:|:------------
+Cell 1        | Cell 2     | Cell 3
+
+---
+
+# Two-Column Style
+
+.left-col[Left Column]
+
+.right-col[Right Column]
+
+---
+
+# Code
+
+Normal Code Block:
+
+```{r}
+mean(10)
+```
+
+Show output only with option `echo = FALSE`:
+
+```{r echo=FALSE}
+mean(10)
+```
+
+
+Code is not executed with option `eval = FALSE`:
+```{r eval = FALSE}
+mean(10)
+```
+
+Highlight code with `{{code}}`:
+```{r}
+{{mean(10)}}
+```
+
+---
+
+# Text Highlighting
+
+*Cursive* with one `*`
+
+**Fat** with two `**`
+
+<mark> Highlighted </mark> with `<mark>` `</mark>`
+
+
+
+
