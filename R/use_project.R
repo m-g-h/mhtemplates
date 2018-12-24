@@ -41,6 +41,7 @@ use_project <- function(path = "~/Documents/Projects/", project = "template", mo
     usethis::use_roxygen_md()
     usethis::use_pipe()
     usethis::use_data_raw()
+    setwd(paste0(path,project))
     mhtemplates::use_latex()
     mhtemplates::use_xaringan()
   }
