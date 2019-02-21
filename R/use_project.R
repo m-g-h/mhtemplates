@@ -10,7 +10,7 @@
 #'
 #' @import usethis
 #'
-use_project <- function(path = "~/Documents/Projects/", project = "template", mode = "tex_only") {
+use_project <- function(project = "template", path = "~/Documents/Projects/", mode = "tex_only") {
 
   if (mode == "tex_only") {
 
@@ -26,8 +26,8 @@ use_project <- function(path = "~/Documents/Projects/", project = "template", mo
   else if (mode == "data_minimal") {
 
     usethis::create_package(path = paste0(path,project), open = F)
+    usethis::create_project(path =  paste0(path,project), open = F)
     usethis::proj_set(path = paste0(path,project))
-    usethis::use_git()
     usethis::use_roxygen_md()
     usethis::use_pipe()
     usethis::use_data_raw()
@@ -35,9 +35,11 @@ use_project <- function(path = "~/Documents/Projects/", project = "template", mo
 
   else if (mode == "data_full") {
     usethis::create_package(path = paste0(path,project), open = F)
+    usethis::create_project(path =  paste0(path,project), open = F)
     usethis::proj_set(path = paste0(path,project))
     usethis::use_package("drake", type = "imports")
-    usethis::use_git()
+    usethis::use_build_ignore(".drake")
+    usethis::use_build_ignore("written")
     usethis::use_roxygen_md()
     usethis::use_pipe()
     usethis::use_data_raw()

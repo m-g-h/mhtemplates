@@ -4,13 +4,13 @@
 \alias{use_project}
 \title{Function for creating project folders for writing or data analysis.}
 \usage{
-use_project(path = "~/Documents/Projects/", project = "template",
+use_project(project = "template", path = "~/Documents/Projects/",
   mode = "tex_only")
 }
 \arguments{
-\item{path}{Path where the project files should be created. Defauts to "~/Documents/Projects/".}
-
 \item{project}{Project name}
+
+\item{path}{Path where the project files should be created. Defauts to "~/Documents/Projects/".}
 
 \item{mode}{"tex_only" only creates the files for writing a latex document. "data_minimal"
 Creates and RProject with git, magrittr::pipe integration and a data-raw folder. "data_full"
