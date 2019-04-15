@@ -8,45 +8,54 @@
 	\newcommand{\Programme} 		{Programme}
 	\newcommand{\AsssignmentName}	{Assignment Name}
 	\newcommand{\Name}				{Name}
+	\newcommand{\AuthorOneInfo}		{Department of Corporate Management \& Economics, \textit{Zeppelin University}. Mail: \href{mailto:m.haas@zeppelin-university.net} {m.haas@zeppelin-university.net}}
+	\newcommand{\AuthorTwo}			{\& Name \thanks{\AuthorTwoInfo}}
+	\newcommand{\AuthorTwoInfo}		{Info Two}
 	\newcommand{\MatrikelNummer}	{12345678}
 	\newcommand{\Date}				{Date}
 	\newcommand{\Semester}			{Term}
-	\newcommand{\Supervisor}		{Supervisor}
+	\newcommand{\WeThank}			{We thank our supervisors~}
+	\newcommand{\Supervisor}		{(i) Supervisor One, \textit{Chair}}
+	\newcommand{\SupervisorTwo}     {and (ii) Supervisor Two, \textit{Chair}}
 	\newcommand{\Class}				{Seminar Title}
+	
+	\hypersetup{
+	pdftitle={My title},    % title
+	pdfauthor={Author},     % author
+	pdfsubject={Subject},   % subject of the document
+	pdfcreator={Creator},   % creator of the document
+	pdfproducer={Producer}, % producer of the document
+	pdfkeywords={keyword1, key2, key3} % list of keywords}
+	}
+
 
 % DOCUMENT --------------------------------------------------------------------------------------
 \begin{document}
 
 % TITLEPAGE -------------------------------------------------------------------------------------
 	\begin{titlepage}
-		\input{.frontmatter/titlepage-with-logo}		% titlepage-assignment-de or titlepage-assignment-eng or titlepage-with-logo
+		\input{.frontmatter/titlepage-paper-eng}		% titlepage-assignment-ger or titlepage-assignment-eng or titlepage-with-logo or titlepage-paper-eng
 	\end{titlepage}
 
-% CONTENTS --------------------------------------------------------------------------------------
-	\pagenumbering{roman}
-	\newpage
-	\tableofcontents
-	\listoftables
-	\listoffigures
-	\newpage
-	\pagenumbering{arabic}
-
-% ABSTRACT --------------------------------------------------------------------------------------
-
-	\section{Abstract}
-	Here comes the abstract!
-	\newpage
 
 % DOCUMENT --------------------------------------------------------------------------------------
-
-  \newpage
+	\section{Section}
+	\subsection{Subsection}
+	\subsubsection{Subsubsection}
 
 % AUTHORS DECLARATION ---------------------------------------------------------------------------
+	\onecolumn
 	\input{.frontmatter/authors-declaration-eng}	% authors-declaration-eng or authors-declaration-ger
-	\newpage
 
 % BIBLIOGRAPHY ----------------------------------------------------------------------------------
 
 	\printbibliography
+
+% APPENDIX ----------------------------------------------------------------------------------
+	
+	\begin{appendices}
+		\section{}
+	\end{appendices}
+	
 
 \end{document}

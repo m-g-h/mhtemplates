@@ -1,29 +1,31 @@
 % PREAMBLE --------------------------------------------------------------------------------------
-	\documentclass[11pt,a4paper,parskip]{scrartcl}
+	\documentclass[11pt,a4paper,parskip, twocolumn]{scrartcl}
 
 % FORMATTING ------------------------------------------------------------------------------------
 	\addtokomafont{disposition}{\rmfamily}
 	\usepackage{geometry}							% Edge spacing 
 	\geometry{
-		left=2.5cm,
-		right=2.5cm,
+		left=2.0cm,
+		right=2.0cm,
 		top=2cm,
 		bottom=4cm,
-		bindingoffset=5mm
 	}
 	\setlength{\parindent}{0pt}						% Length of indentation of the first line of a paragraph
 	\usepackage{paralist}							% Fancy lists and enumerations
 	\usepackage{graphicx}							% Picture Integration
 	\usepackage{subcaption}							% Allows Subgraphics
 	\usepackage{booktabs}							% Nice tables
+	\usepackage{caption}
+	\usepackage{tikz}								% Implementation of tikz vecotr images
 	\usepackage{multirow}
 	\usepackage{lscape}
-	\usepackage{setspace}							% 1.5 spacing of lines
-	\onehalfspacing
-	%\usepackage{titlesec}							% Spacing of Titlesections
-	%\titlespacing*{\section}{0pt}{35px}{6px}		% Spacing LEFT, BEFORE and AFTER Section Header
-	%\titlespacing*{\subsection}{0pt}{35px}{6px}	% Spacing LEFT, BEFORE and AFTER Subsection Header
-	%\titlespacing*{\subsubsection}{5px}{20px}{6px}	% Spacing LEFT, BEFORE and AFTER Subsubsection Header
+	\usepackage{setspace}							% Spacing of lines
+	\setstretch{1.0}
+	\setlength{\columnsep}{15pt}
+	\usepackage{titlesec}							% Spacing of Titlesections
+	\titlespacing*{\section}{0pt}{0px}{0px}		% Spacing LEFT, BEFORE and AFTER Section Header
+	\titlespacing*{\subsection}{20pt}{0px}{0px}	% Spacing LEFT, BEFORE and AFTER Subsection Header
+	\titlespacing*{\subsubsection}{20px}{0px}{0px}	% Spacing LEFT, BEFORE and AFTER Subsubsection Header
 	
 	\usepackage{enumitem}							% Compact itemize lists
 	\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
@@ -31,6 +33,12 @@
 	\newtheorem{theorem}{Theorem}					% Theorem environment
 	
 	\usepackage{booktabs}							% Fancy table formatting
+	
+	\usepackage[titletoc, title]{appendix}			% Appendix Sections
+	\usepackage{abstract}			% Appendix Sections
+	
+	\usepackage{authblk}
+	\usepackage{blindtext}							% Used for the Paper Titlepage
 
 % TYPESETTING -----------------------------------------------------------------------------------
 	\usepackage[utf8]{inputenc}						% utf8 for german nouns OE, AE and UE, else latin1
@@ -52,12 +60,6 @@
 		pdfmenubar=true,        % show Acrobat’s menu?
 		pdffitwindow=false,     % window fit to page when opened
 		pdfstartview={FitH},    % fits the width of the page to the window
-		pdftitle={My title},    % title
-		pdfauthor={Author},     % author
-		pdfsubject={Subject},   % subject of the document
-		pdfcreator={Creator},   % creator of the document
-		pdfproducer={Producer}, % producer of the document
-		pdfkeywords={keyword1, key2, key3}, % list of keywords
 		pdfnewwindow=true,      % links in new PDF window
 		colorlinks=true,       % false: boxed links; true: colored links
 		linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
@@ -74,6 +76,7 @@
 	\usepackage{bm}									% Fancy bold greeks \bm{math expression}
 	\newcommand{\undset}[2]{\underset{\scriptscriptstyle #1}{#2\strut}}	
 	% Correct height of different \undersets
+
 
 % BIBLIOGRAPHY ----------------------------------------------------------------------------------
 	\usepackage[backend=biber,citestyle=authoryear-icomp,bibstyle=authoryear]{biblatex}
