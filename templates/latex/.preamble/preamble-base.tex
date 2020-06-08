@@ -1,44 +1,54 @@
 % PREAMBLE --------------------------------------------------------------------------------------
-	\documentclass[11pt,a4paper,parskip, twocolumn]{scrartcl}
+	\documentclass[11pt,a4paper, parskip, twocolumn]{scrartcl}
+	% Remove twocolumn for normal style
+	% Set twosided for twosided documents
 
 % FORMATTING ------------------------------------------------------------------------------------
 	\addtokomafont{disposition}{\rmfamily}
 	\usepackage{geometry}							% Edge spacing 
 	\geometry{
-		left=2.0cm,
-		right=2.0cm,
+		left=2.0cm,									% `inner` for twosided documents
+		right=2.0cm,								% `outer` for twosided documents
 		top=2cm,
 		bottom=4cm,
 	}
-	\setlength{\parindent}{0pt}						% Length of indentation of the first line of a paragraph
-	\usepackage{paralist}							% Fancy lists and enumerations
-	\usepackage{graphicx}							% Picture Integration
-	\usepackage{subcaption}							% Allows Subgraphics
-	\usepackage{booktabs}							% Nice tables
-	\usepackage{caption}
-	\usepackage{tikz}								% Implementation of tikz vecotr images
-	\usepackage{multirow}
-	\usepackage{lscape}
+
 	\usepackage{setspace}							% Spacing of lines
-	\setstretch{1.0}
-	\setlength{\columnsep}{15pt}
-	\usepackage{titlesec}							% Spacing of Titlesections
-	\titlespacing*{\section}{0pt}{0px}{0px}		% Spacing LEFT, BEFORE and AFTER Section Header
-	\titlespacing*{\subsection}{20pt}{0px}{0px}	% Spacing LEFT, BEFORE and AFTER Subsection Header
-	\titlespacing*{\subsubsection}{20px}{0px}{0px}	% Spacing LEFT, BEFORE and AFTER Subsubsection Header
+	\setstretch{1.2}								% Linespace
+
+	\setlength{\parindent}{0pt}						% Length of indentation of the first line of a paragraph
 	
+	\usepackage{paralist}							% Fancy lists and enumerations
 	\usepackage{enumitem}							% Compact itemize lists
 	\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
 	
-	\newtheorem{theorem}{Theorem}					% Theorem environment
-	
-	\usepackage{booktabs}							% Fancy table formatting
-	
-	\usepackage[titletoc, title]{appendix}			% Appendix Sections
-	\usepackage{abstract}			% Appendix Sections
+	\usepackage{appendix}							% Appendix Sections
+	\usepackage{abstract}							% Abstract Sections
 	
 	\usepackage{authblk}
-	\usepackage{blindtext}							% Used for the Paper Titlepage
+	\usepackage{blindtext}							% Lorem Ipsum
+	
+% TABLES AND FIGURES ---------------------------------------------------------------------------
+	\usepackage{graphicx}							% Picture Integration
+	\usepackage{booktabs}							% Nice tables
+	\usepackage{tikz}								% Implementation of tikz vector images
+	\usepackage{dcolumn}							% Align decimal points in tables
+	\usepackage{siunitx}							% Column type `S` for decimals
+	\usepackage{multirow}							% Cells spanning multiple rows
+	
+	\setlength{\columnsep}{15pt}					% More compact tables, as columns are closer to each other
+
+	\usepackage{caption}							% Captions formatting
+	\captionsetup[figure]{format=plain, labelfont=bf, width=0.95\textwidth, justification=centerfirst}
+	\captionsetup[table]{format = plain, labelfont=bf, justification=centerfirst, width = 0.95\textwidth}
+	\captionsetup[subtable]{margin = 0pt}
+	
+	\usepackage{subfig}
+	\usepackage{floatrow}							% Subfigures and Subtables
+	\floatsetup[table]{capposition=top, subcapbesideposition=center}
+	\floatsetup[figure]{style=plain, subcapbesideposition=center}
+	
+	\usepackage{float}								% `H` float operator
 
 % TYPESETTING -----------------------------------------------------------------------------------
 	\usepackage[utf8]{inputenc}						% utf8 for german nouns OE, AE and UE, else latin1
@@ -49,10 +59,26 @@
 	%\renewcommand*\familydefault{\sfdefault}		% Typeset without serifs
 	\usepackage[activate={true,nocompatibility},
 				tracking=true,	
-				kerning=true]{microtype}			% Next-level typesetting
+				kerning=false]{microtype}			% Next-level typesetting
 
-% UTILITY ---------------------------------------------------------------------------------------
-	\usepackage{hyperref} 							% add [hidelinks] if you don't want to see each link highlighted...
+% MATHS -----------------------------------------------------------------------------------------
+	\usepackage{amsmath}							% Standard maths package
+	\usepackage{amssymb}							% Fancy symbols and typesets (includes amsfonts)
+	\usepackage{amstext}							% Allows text in formulas
+	\usepackage{extarrows}							% fancy arrows
+	\usepackage{bm}									% Fancy bold greeks \bm{math expression}
+	\newcommand{\undset}[2]{\underset{\scriptscriptstyle #1}{#2\strut}}	
+	% Correct height of different \undersets
+
+% MATH ENVIRONMENTS -----------------------------------------------------------------------------
+		
+	\newtheorem{theorem}{Theorem}					% Theorem environment	
+	\newtheorem{hypothesis}{Hypothesis}				% Hypothesis environment
+	\newtheorem{assumption}{Assumption}				% Assumption environment
+
+
+% REFERENCING -----------------------------------------------------------------------------------
+	\usepackage{hyperref} 		% add [hidelinks] if you don't want to see each link highlighted...
 	\hypersetup{
 		bookmarks=true,         % show bookmarks bar?
 		unicode=false,          % non-Latin characters in Acrobat’s bookmarks
@@ -68,15 +94,9 @@
 		urlcolor=cyan           % color of external links
 	}
 
-% MATHS -----------------------------------------------------------------------------------------
-	\usepackage{amsmath}							% Standard maths package
-	\usepackage{amssymb}							% Fancy symbols and typesets (includes amsfonts)
-	\usepackage{amstext}							% Allows text in formulas
-	\usepackage{extarrows}							% fancy arrows
-	\usepackage{bm}									% Fancy bold greeks \bm{math expression}
-	\newcommand{\undset}[2]{\underset{\scriptscriptstyle #1}{#2\strut}}	
-	% Correct height of different \undersets
-
+	\usepackage{cleveref}		% Intelligent Referencing
+	\crefname{hypothesis}{hypothesis}{Hypothesis}
+	\crefname{assumption}{assumption}{Assumption}
 
 % BIBLIOGRAPHY ----------------------------------------------------------------------------------
 	\usepackage[backend=biber,citestyle=authoryear-icomp,bibstyle=authoryear]{biblatex}

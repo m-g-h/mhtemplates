@@ -8,7 +8,7 @@
 \newcommand{\Programme} 		{Programme}
 \newcommand{\AsssignmentName}	{Assignment Name}
 \newcommand{\Name}				{Name}
-\newcommand{\AuthorOneInfo}		{Department, \textit{Insititution}. Mail: \href{mailto:name@mail.net} {name@mail.net}}
+\newcommand{\AuthorOneInfo}		{Department of Corporate Management \& Economics, \textit{Zeppelin University}. Mail: \href{mailto:m.haas@zeppelin-university.net} {m.haas@zeppelin-university.net}}
 \newcommand{\AuthorTwo}			{\& Name \thanks{\AuthorTwoInfo}}
 \newcommand{\AuthorTwoInfo}		{Info Two}
 \newcommand{\MatrikelNummer}	{12345678}
@@ -27,62 +27,6 @@ pdfcreator={Creator},   % creator of the document
 pdfproducer={Producer}, % producer of the document
 pdfkeywords={keyword1, key2, key3} % list of keywords}
 }
-
-% COMMANDS --------------------------------------------------------------------------------------
-
-%% Referencing
-%\cref{sec:section} and \Cref{sec:section} for normal and capitalised references
-
-%% Citations
-% \textcite{Akerlof1} or \autocite{Akerlof1}
-
-%% Tables and figures
-% You can use the same below commands for tables and figures, just exchange `table` with `figure`and wrap figures in a resizebox:
-
-%\resizebox{0.98\linewidth}{!}{\input{"figures/figure"}}
-
-%% Standard Table or figure
-%\begin{table}[H]				
-%	\centering
-%	\setstretch{1}
-%	\caption[Shorttitle]{Longtitle \\ \small Explanatory Text} \label{tab:label}	
-%	\small			
-%	\input{"tables/table.tex"}	
-%\end{table}
-
-%% Table or figure with subfigures side by side
-%\begin{table}[H]				
-%	\centering
-%	\setstretch{1}
-%	\caption[Shorttitle]{Longtitle \\ \small Explanatory Text} \label{tab:label}	
-%	\small			
-%	\subfloat[Subcaption 1]{\input{tables/table.tex}}	
-%	\qquad	 
-%	\subfloat[Subcaption 2]{\input{tables/table.tex}}	
-%\end{table}
-
-%% Table or figure with subfigeras on top of each other
-%\begin{table}[H]
-%	\centering
-%	\setstretch{1}
-%	\caption[Shorttitle]{Longtitle \\ \small Explanatory text.} \label{tab:label}
-%	\small	
-%	\sidesubfloat[]{\resizebox{0.98\linewidth}{!}{\input{"tables/table.tex"}}} \\
-%	\sidesubfloat[]{\resizebox{0.98\linewidth}{!}{\input{"tables/table.tex"}}}
-%\end{table}
-
-%% Environments for Theorems etc...
-%\begin{theorem} \label{th:theorem}
-%	content
-%\end{theorem}
-%
-%\begin{hypothesis} \label[hypothesis]{hyp:hypothesis}
-%	content
-%\end{hypothesis}
-%
-%\begin{assumption} \label[assumption]{ass:assumption}
-%	content
-%\end{assumption}
 
 % DOCUMENT --------------------------------------------------------------------------------------
 \begin{document}
@@ -108,11 +52,11 @@ Hier kommt das Abstract hin!
 % DOCUMENT --------------------------------------------------------------------------------------
 \newpage
 \pagenumbering{arabic}
-\section{Section} \label{sec:section}
+\section{Section}
 	\blindtext
-	\subsection{Subsection} \label{sec:subsection}
+	\subsection{Subsection}
 		\blindtext
-		\subsubsection{Subsubsection} \label{sec:subsubsection}
+		\subsubsection{Subsubsection}
 			\blindtext
 			\blindtext
 			\blindtext
@@ -126,9 +70,7 @@ Hier kommt das Abstract hin!
 
 % APPENDIX ----------------------------------------------------------------------------------
 \begin{appendices}
-	\appendix
-	\section{Appendix} \label{app:appendix}
-	\subsection{Subappendix} \label{app:subappendix}
+	\section{}
 \end{appendices}
 	
 

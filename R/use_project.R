@@ -24,7 +24,7 @@ use_project <- function(project = "template", path = "~/Documents/Projects/", mo
   }
 
   else if (mode == "data_minimal") {
-
+    dir.create(path)
     usethis::create_package(path = paste0(path,project), open = F)
     usethis::create_project(path =  paste0(path,project), open = F)
     usethis::proj_set(path = paste0(path,project))
@@ -34,6 +34,7 @@ use_project <- function(project = "template", path = "~/Documents/Projects/", mo
   }
 
   else if (mode == "data_full") {
+    dir.create(path)
     usethis::create_package(path = paste0(path,project), open = F)
     usethis::create_project(path =  paste0(path,project), open = F)
     usethis::proj_set(path = paste0(path,project))

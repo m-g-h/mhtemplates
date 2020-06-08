@@ -4,8 +4,11 @@
 \alias{use_project}
 \title{Function for creating project folders for writing or data analysis.}
 \usage{
-use_project(project = "template", path = "~/Documents/Projects/",
-  mode = "tex_only")
+use_project(
+  project = "template",
+  path = "~/Documents/Projects/",
+  mode = "tex_only"
+)
 }
 \arguments{
 \item{project}{Project name}

@@ -6,7 +6,7 @@
 #'
 use_latex <- function(dir = "written") {
 
-    usethis::use_directory(paste0(dir,"/"))
+    dir.create(paste0(dir,"/"))
 
     file.copy(system.file("templates/latex.zip", package = "mhtemplates"),
               to = paste0(dir,"/latex.zip"))
