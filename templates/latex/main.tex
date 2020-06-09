@@ -1,6 +1,7 @@
 %% PREAMBLE -------------------------------------------------------------------------------------
 \input{.preamble/preamble-eng}	% preamble-ger or preamble-eng
 
+\addbibresource{bibliography.bib} 				% Path of bib-file
 % TITLE -----------------------------------------------------------------------------------------
 \newcommand{\Title}				{Title}
 \newcommand{\Subtitle}			{Subtitle}
@@ -31,6 +32,8 @@ pdfkeywords={keyword1, key2, key3} % list of keywords}
 % COMMANDS --------------------------------------------------------------------------------------
 
 %% Referencing
+% \label(sec:section) for normal labels
+% \label[appendix]{} for references regarding the appendix
 %\cref{sec:section} and \Cref{sec:section} for normal and capitalised references
 
 %% Citations
@@ -126,9 +129,8 @@ Hier kommt das Abstract hin!
 
 % APPENDIX ----------------------------------------------------------------------------------
 \begin{appendices}
-	\appendix
-	\section{Appendix} \label{app:appendix}
-	\subsection{Subappendix} \label{app:subappendix}
+	\section{Appendix} \label[appendix]{app:appendix}
+	\subsection{Subappendix} \label[appendix]{app:subappendix}
 \end{appendices}
 	
 
