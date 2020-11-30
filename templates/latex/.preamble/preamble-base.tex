@@ -1,5 +1,5 @@
 % PREAMBLE --------------------------------------------------------------------------------------
-	\documentclass[11pt,a4paper, parskip, twocolumn]{scrartcl}
+	\documentclass[11pt,a4paper, parskip]{scrartcl}
 	% Remove twocolumn for normal style
 	% Set twosided for twosided documents
 
@@ -71,8 +71,15 @@
 	% Correct height of different \undersets
 
 % MATH ENVIRONMENTS -----------------------------------------------------------------------------
+	\usepackage{amsthm}								% Theorem and Proof environments
+	\usepackage{tcolorbox}							% Nice boxes for theorem environments
 		
-	\newtheorem{theorem}{Theorem}					% Theorem environment	
+	\newtheorem{theo}{Theorem}[section]			    % Theorem environment without box
+	\newenvironment{theorem}						% Theorem environment with box	
+	{\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black]\begin{theo}}
+			{\end{theo}\end{tcolorbox}}	
+		
+		
 	\newtheorem{hypothesis}{Hypothesis}				% Hypothesis environment
 	\newtheorem{assumption}{Assumption}				% Assumption environment
 
@@ -98,7 +105,16 @@
 	\crefname{hypothesis}{hypothesis}{Hypothesis}
 	\crefname{assumption}{assumption}{Assumption}
 	\crefname{appendix}{appendix}{Appendix}
+% GLOSSARY ----------------------------------------------------------------------------------
+\usepackage[nomain, nonumberlist]{glossaries}
+\usepackage{glossary-topic}
+\setglossarystyle{topic}
+\newglossary*{symbols}{Symbols}
+\makeglossaries
+\glsdisablehyper
 
+\usepackage{makeidx}
+\makeindex
 % BIBLIOGRAPHY ----------------------------------------------------------------------------------
 	\usepackage[backend=biber,citestyle=authoryear-icomp,bibstyle=authoryear]{biblatex}
 	% Biblatex bibliography

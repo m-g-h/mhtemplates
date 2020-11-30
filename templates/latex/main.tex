@@ -1,6 +1,8 @@
 %% PREAMBLE -------------------------------------------------------------------------------------
 \input{.preamble/preamble-eng}	% preamble-ger or preamble-eng
 
+% change settings in .preamble/preamble-base
+
 \addbibresource{bibliography.bib} 				% Path of bib-file
 % TITLE -----------------------------------------------------------------------------------------
 \newcommand{\Title}				{Title}
@@ -29,7 +31,15 @@ pdfproducer={Producer}, % producer of the document
 pdfkeywords={keyword1, key2, key3} % list of keywords}
 }
 
+% SYMBOL DIRECTORY
+\input{symbols.tex}
+
 % COMMANDS --------------------------------------------------------------------------------------
+
+%% Symbols and special math operators 
+% Define special symbols and operators in 'symbols.tex'
+% Include them in text or equations via \gls{command}
+% Rum the glossaries command to generate the symbol directory
 
 %% Referencing
 % \label(sec:section) for normal labels
@@ -91,7 +101,7 @@ pdfkeywords={keyword1, key2, key3} % list of keywords}
 \begin{document}
 
 % TITLEPAGE -------------------------------------------------------------------------------------
-\input{.frontmatter/titlepage-paper-eng}		% titlepage-assignment-ger or titlepage-assignment-eng or titlepage-with-logo or titlepage-paper-eng
+\input{.frontmatter/titlepage-thesis}		% titlepage-assignment-ger or titlepage-assignment-eng or titlepage-with-logo or titlepage-paper-eng or titlepage-thesis
 
 % CONTENTS --------------------------------------------------------------------------------------
 \newpage
@@ -99,6 +109,7 @@ pdfkeywords={keyword1, key2, key3} % list of keywords}
 \tableofcontents
 \listoftables
 \listoffigures
+\printglossaries
 
 
 % ABSTRACT --------------------------------------------------------------------------------------
@@ -113,6 +124,16 @@ Hier kommt das Abstract hin!
 \pagenumbering{arabic}
 \section{Section} \label{sec:section}
 	\blindtext
+	
+	Here we use the symbol command \verb|gls| to generate in-text math symbols: \gls{vel} and here in in equation:
+	\begin{equation}
+		\gls{vel}
+	\end{equation}
+	
+	This is a nice way to display theorems:
+	\begin{theorem}[Title]
+		content
+	\end{theorem}
 	\subsection{Subsection} \label{sec:subsection}
 		\blindtext
 		\subsubsection{Subsubsection} \label{sec:subsubsection}
