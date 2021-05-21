@@ -1,3 +1,5 @@
 ^data-raw$
 ^mhtemplates\.Rproj$
 ^\.Rproj\.user$
+^templates$
+^make\.R$

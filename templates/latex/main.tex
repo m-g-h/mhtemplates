@@ -3,7 +3,12 @@
 
 % change settings in .preamble/preamble-base
 
-\addbibresource{bibliography.bib} 				% Path of bib-file
+% BIBLIOGRAPHY RESOURCE FILE (open with right-click)
+\addbibresource{bibliography.bib} % Path of bib-file
+
+% SYMBOL DIRECTORY (open with right-click)
+\input{symbols.tex}
+
 % TITLE -----------------------------------------------------------------------------------------
 \newcommand{\Title}				{Title}
 \newcommand{\Subtitle}			{Subtitle}
@@ -30,9 +35,6 @@ pdfcreator={Creator},   % creator of the document
 pdfproducer={Producer}, % producer of the document
 pdfkeywords={keyword1, key2, key3} % list of keywords}
 }
-
-% SYMBOL DIRECTORY
-\input{symbols.tex}
 
 % COMMANDS --------------------------------------------------------------------------------------
 
@@ -101,45 +103,36 @@ pdfkeywords={keyword1, key2, key3} % list of keywords}
 \begin{document}
 
 % TITLEPAGE -------------------------------------------------------------------------------------
-\input{.frontmatter/titlepage-thesis}		% titlepage-assignment-ger or titlepage-assignment-eng or titlepage-with-logo or titlepage-paper-eng or titlepage-thesis
+\input{.frontmatter/titlepage-assignment-eng}		
+% CHENGE TITLEPAGE HERE: titlepage-assignment-ger or titlepage-assignment-eng or titlepage-with-logo or titlepage-paper-eng or titlepage-thesis
 
 % CONTENTS --------------------------------------------------------------------------------------
 \newpage
-\pagenumbering{roman}
+\pagenumbering{roman} %roman numerals
 \tableofcontents
 \listoftables
 \listoffigures
-\printglossaries
+\printglossaries % Symbol directory
 
 
 % ABSTRACT --------------------------------------------------------------------------------------
 \newpage
 
-\section{Abstract}
+\section*{Abstract}
 Hier kommt das Abstract hin!
 
 
 % DOCUMENT --------------------------------------------------------------------------------------
 \newpage
 \pagenumbering{arabic}
-\section{Section} \label{sec:section}
+
+\section{Section} \label{sec:section_1}
 	\blindtext
-	
-	Here we use the symbol command \verb|gls| to generate in-text math symbols: \gls{vel} and here in in equation:
-	\begin{equation}
-		\gls{vel}
-	\end{equation}
-	
-	This is a nice way to display theorems:
-	\begin{theorem}[Title]
-		content
-	\end{theorem}
-	\subsection{Subsection} \label{sec:subsection}
-		\blindtext
+	\subsection{Referencing} \label{sec:subsection}
+		Use \verb*|\cref{sec:section_1}| to reference to the any section or subsection: \cref{sec:section_1} (use \verb*|\Cref{sec:section_1}| to get initial capitals: \Cref{sec:section_1})
 		\subsubsection{Subsubsection} \label{sec:subsubsection}
 			\blindtext
-			\blindtext
-			\blindtext
+			
 
 % AUTHORS DECLARATION ---------------------------------------------------------------------------
 \onecolumn

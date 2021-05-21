@@ -1,5 +1,7 @@
 #' Creates files for xaringan html presentation integration in "presentation/".
 #'
+#' @param dir \code{string scaler}, giving the relative path to the directory
+#' where the template should be created
 #' @export
 #'
 #' @importFrom usethis use_directory

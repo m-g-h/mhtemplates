@@ -6,6 +6,10 @@
 \usage{
 use_xaringan(dir = "presentation")
 }
+\arguments{
+\item{dir}{\code{string scaler}, giving the relative path to the directory
+where the template should be created}
+}
 \description{
 Creates files for xaringan html presentation integration in "presentation/".
 }

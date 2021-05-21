@@ -5,7 +5,7 @@ author: "Martin Haas"
 date: "YYYY-MM-DD"
 output:
   xaringan::moon_reader:
-    css: [default, metropolis, metropolis-fonts, mycss.css]
+    css: [default, metropolis, metropolis-fonts, LMU_style.css]
     lib_dir: libs
     nature:
       highlightStyle: solarized-light

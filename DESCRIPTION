@@ -16,4 +16,8 @@ Imports:
     tikzDevice,
     grDevices,
     tibble,
-    purrr
+    purrr,
+    drake,
+    stringr,
+    usethis,
+    magrittr
