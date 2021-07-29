@@ -20,4 +20,6 @@ Imports:
     drake,
     stringr,
     usethis,
-    magrittr
+    magrittr,
+    crayon,
+    rstudioapi
