@@ -1,0 +1,22 @@
+---
+title: "report"
+author: "autor"
+date: '2022-04-08'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(targets)
+library(here)
+i_am("R/report.Rmd")
+
+tar_store = here("_targets")
+```
+# Read plot from `targets` store
+
+```{r plot}
+tar_read(iris_plot,
+         store = tar_store)
+```
