@@ -55,6 +55,20 @@ zip(zipfile = template_zip_file_targets,
 setwd(originalwd)
 
 
+# RMAKRDOWN PAPER ---------------------------------------------------------
+
+setwd("templates/rmarkdown_paper/")
+
+template_zip_file_rmarkdown_paper = "../../inst/templates/rmarkdown_paper.zip"
+
+file.remove(template_zip_file_rmarkdown_paper)
+
+zip(zipfile = template_zip_file_rmarkdown_paper,
+    files = list.files(all.files = T,recursive = T))
+
+setwd(originalwd)
+
+
 # INSTALL -----------------------------------------------------------------
 
 
@@ -62,4 +76,4 @@ setwd(originalwd)
 # Install package
 library(devtools)
 document()
-install()
+install(upgrade = "never")

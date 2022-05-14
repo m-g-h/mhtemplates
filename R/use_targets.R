@@ -1,7 +1,5 @@
 #' Creates files for a target project.
 #'
-#' @param dir \code{string scaler}, giving the relative path to the directory
-#' where the template should be created
 #' @export
 #'
 #' @importFrom usethis use_directory

@@ -26,5 +26,5 @@ list(
              plot_iris(data)),
   tar_render(report,
              path = "R/report.Rmd",
-             output_dir = "output/reports")
+             output_dir = "_output/reports")
 )

@@ -6,10 +6,6 @@
 \usage{
 use_targets()
 }
-\arguments{
-\item{dir}{\code{string scaler}, giving the relative path to the directory
-where the template should be created}
-}
 \description{
 Creates files for a target project.
 }

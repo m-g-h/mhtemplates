@@ -19,6 +19,6 @@ usethis::use_git()
 testthat::test_dir("tests")
 
 # TARGETS
-targets::tar_make()
+targets::tar_make_future(workers = 1)
 
 

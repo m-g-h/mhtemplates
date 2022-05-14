@@ -1,0 +1,138 @@
+---
+title: "Untitled"
+subtitle: "subtitle"
+thanks: "thanks"
+author: 
+  - "Author One^[Institute One, author@one.org]"
+  - "Author Two^[Institute Two, author@two.org]"
+tags: [lel, kek]
+abstract: |
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+date: "7 4 2022"
+output: 
+  bookdown::pdf_document2:
+    extra_dependencies: ["subfig", "flafter", "booktabs"]
+fontsize: "11 pt"
+geompetry:
+  - "left=20mm"
+  - "right=20mm"
+  - "top=20mm"
+  - "bottom=40mm"
+bibliography: bibliography.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# DOCUMENTATION:
+# https://bookdown.org/yihui/rmarkdown-cookbook/tables.html
+# https://bookdown.org/yihui/bookdown/citations.html
+
+```
+
+\newpage
+
+# Section
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no takimata sanctus est Lorem ipsum dolor sit amet.
+
+> Blockquote Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+## Subsection
+
+    This text is displayed verbatim / preformatted
+
+Standard citation: @Akerlof1
+
+With parantheses: [@Akerlof1]
+
+Multiple: [@Akerlof1; @BirdRowlands1]
+
+This text is also displayed verbatim / preformatted
+
+### Subsubsection
+
+# Math
+
+Inline math: $e = mc^2$
+
+Block math:
+
+$$\begin{aligned}
+e = mc^2
+\end{aligned}$$
+
+I can refer to an equation with equation \@ref(eq:equation)
+
+```{=tex}
+\begin{equation}
+\bar{X} = \frac{\sum_{i=1}^n X_i}{n} (\#eq:equation)
+\end{equation}
+```
+\newpage
+
+# Tables
+
+# Standard Table
+
+I can refer to a table as table \@ref(tab:mtcars).
+
+```{r mtcars, echo=FALSE}
+knitr::kable(mtcars[1:5, 1:5],
+             caption = "The mtcars data.",
+             caption.short = "shortcap",
+             table.envir = "table",
+             position = "h",
+             booktabs = TRUE)
+```
+
+## Multiple Tables
+
+```{r multiples, echo=FALSE}
+d1 <- head(cars, 3)
+d2 <- head(mtcars[, 1:3], 5)
+knitr::kable(
+  list(d1, d2),
+  caption = 'Two tables placed side by side.',
+  booktabs = TRUE, valign = 't'
+)
+```
+
+\newpage
+
+# Figures
+
+## Standard Figure
+
+I refer to the figure as figure \@ref(fig:FIGURE)
+
+```{r FIGURE, echo=FALSE, fig.align='center', fig.cap='Main Caption', fig.pos="h"}
+plot(1:10)
+```
+
+\newpage
+
+## Using subfigures
+
+```{r SUBFIGURES, echo=FALSE, fig.align='center', fig.cap='Main Caption', fig.ncol=2, fig.subcap=c('subcap for a', 'subcap for b', 'subcap for c'), out.width="50%", fig.pos="h"}
+plot(1:10)
+plot(cars, pch = 19)
+boxplot(Sepal.Width ~ Species, data = iris)
+```
+
+\newpage
+
+# References
+
+::: {#refs}
+:::
+
+# (APPENDIX) Appendix {.unnumbered}
+
+# More information
+
+This will be Appendix A.
+
+# One more thing
+
+This will be Appendix B.
