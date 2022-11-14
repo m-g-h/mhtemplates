@@ -3,3 +3,4 @@
 ^\.Rproj\.user$
 ^templates$
 ^make\.R$
+^R/save_tikz\.R$
